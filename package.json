@@ -8,8 +8,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tailwindcss/forms": "^0.3.2",
     "next": "10.x",
     "react": "17.x",
     "react-dom": "17.x"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.13",
+    "tailwindcss": "^2.1.2"
   }
 }
