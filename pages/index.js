@@ -7,6 +7,14 @@ export default function Home() {
     const [startDate, setStartDate] = useState(new Date())
     const [endDate, setEndDate] = useState(new Date().setMonth(startDate.getMonth() + 1))
 
+    useEffect(() => {
+        if (startDate > endDate) setStartDate(endDate)
+    }, [endDate])
+
+    useEffect(() => {
+        if (startDate > endDate) setEndDate(startDate)
+    }, [startDate])
+
     return (
         <div className="bg-gray-100">
             <div className="flex items-center justify-center max-w-2xl min-h-screen mx-auto space-x-4">
@@ -17,7 +25,6 @@ export default function Home() {
                         selectsStart
                         startDate={startDate}
                         endDate={endDate}
-                        minDate={new Date()}
                         nextMonthButtonLabel=">"
                         previousMonthButtonLabel="<"
                         popperClassName="react-datepicker-left"
@@ -70,7 +77,6 @@ export default function Home() {
                         selectsEnd
                         startDate={startDate}
                         endDate={endDate}
-                        minDate={startDate}
                         nextMonthButtonLabel=">"
                         previousMonthButtonLabel="<"
                         popperClassName="react-datepicker-right"
