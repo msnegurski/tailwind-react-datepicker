@@ -16,8 +16,9 @@ export default function Home() {
     }, [startDate])
 
     return (
-        <div className="bg-gray-100">
-            <div className="flex items-center justify-center max-w-2xl min-h-screen mx-auto space-x-4">
+        <div className="flex flex-col min-h-screen bg-gray-100">
+            <div className="flex items-center justify-center max-w-2xl py-20 mx-auto space-x-4">
+                <span className="font-medium text-gray-900">Custom Components:</span>
                 <div className="relative w-40">
                     <DatePicker
                         selected={startDate}
@@ -120,6 +121,33 @@ export default function Home() {
                                 </div>
                             </div>
                         )}
+                    />
+                </div>
+            </div>
+            <div className="flex items-center justify-center max-w-2xl py-20 mx-auto space-x-4">
+                <span className="font-medium text-gray-900">Default Components:</span>
+                <div className="relative w-40">
+                    <DatePicker
+                        selected={startDate}
+                        onChange={(date) => setStartDate(date)}
+                        selectsStart
+                        startDate={startDate}
+                        endDate={endDate}
+                        nextMonthButtonLabel=">"
+                        previousMonthButtonLabel="<"
+                        popperClassName="react-datepicker-left"
+                    />
+                </div>
+                <div className="relative w-40">
+                    <DatePicker
+                        selected={endDate}
+                        onChange={(date) => setEndDate(date)}
+                        selectsEnd
+                        startDate={startDate}
+                        endDate={endDate}
+                        nextMonthButtonLabel=">"
+                        previousMonthButtonLabel="<"
+                        popperClassName="react-datepicker-right"
                     />
                 </div>
             </div>
