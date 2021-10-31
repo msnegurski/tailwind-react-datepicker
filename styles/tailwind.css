@@ -7,12 +7,20 @@
     @apply block w-full text-base md:text-sm bg-white border border-gray-300 rounded shadow-sm form-input
 }
 
-.react-datepicker__tab-loop {
-    @apply absolute
+.react-datepicker-popper {
+    @apply z-40 w-72 text-sm bg-white shadow px-3 py-2 border-2 border-gray-200 rounded
 }
 
-.react-datepicker-popper {
-    @apply absolute top-1 z-10 left-0 w-72 text-sm transform-none bg-white shadow px-3 py-2 !important
+.react-datepicker-left {
+    @apply absolute left-0 right-auto top-11 transform-none !important
+}
+
+.react-datepicker-right {
+    @apply absolute right-0 left-auto top-11 transform-none !important
+}
+
+.react-datepicker__portal {
+    @apply absolute z-10 w-72 text-sm transform-none bg-white shadow px-3 py-2 top-12 right-0 border-2 border-gray-200 rounded
 }
 
 .react-datepicker__month-container {
@@ -32,7 +40,7 @@
 }
 
 .react-datepicker__day-names {
-    @apply flex justify-around text-gray-800 font-medium text-center text-xs
+    @apply flex justify-around text-gray-400 font-medium text-center text-xs
 }
 
 .react-datepicker__day-name {
@@ -56,11 +64,11 @@
 }
 
 .react-datepicker__day--disabled {
-    @apply cursor-not-allowed opacity-50 hover:bg-transparent
+    @apply cursor-not-allowed opacity-40 hover:bg-transparent
 }
 
 .react-datepicker__day--outside-month {
-    @apply text-gray-400
+    @apply text-gray-300
 }
 
 .react-datepicker__day--in-range {
