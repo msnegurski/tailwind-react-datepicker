@@ -7,7 +7,7 @@ export default function Home() {
 
     return (
         <div className="bg-gray-100">
-            <div className="min-h-screen flex items-center max-w-2xl mx-auto justify-center space-x-4">
+            <div className="flex items-center justify-center max-w-2xl min-h-screen mx-auto space-x-4">
                 <div className="relative">
                     <DatePicker
                         selected={startDate}
@@ -18,6 +18,7 @@ export default function Home() {
                         minDate={new Date()}
                         nextMonthButtonLabel=">"
                         previousMonthButtonLabel="<"
+                        popperClassName="react-datepicker-left"
                     />
                 </div>
                 <div className="relative">
@@ -30,6 +31,7 @@ export default function Home() {
                         minDate={startDate}
                         nextMonthButtonLabel=">"
                         previousMonthButtonLabel="<"
+                        popperClassName="react-datepicker-right"
                     />
                 </div>
             </div>
